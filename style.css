@@ -1,16 +1,16 @@
-/* Custom Mechanical Fluid Premium Stylesheet Tokens mapping */
+/* Static Premium Brutalist Rules Parametric Stylesheet Asset Configuration */
 
-.raw-blueprint-grid {
-    background-size: 24px 24px;
-    background-image: radial-gradient(circle, #000000 1.5px, transparent 1.5px);
+.static-hexa-grid-wireframe {
+    background-size: 30px 30px;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px);
 }
 
-/* Header Shadow Layer Properties */
 .header-brutal-shadow {
     box-shadow: 0 4px 0px #000000;
 }
 
-/* Navigation Custom Links Animations */
 .nav-brutal-link {
     position: relative;
     padding-bottom: 4px;
@@ -29,7 +29,6 @@
 .nav-brutal-link:hover { color: #FF7A00; }
 .nav-brutal-link:hover::after { width: 100%; }
 
-/* Infinite Continuous Horizontal Marquee Loop */
 @keyframes continuousMarquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
@@ -42,7 +41,6 @@
     animation-play-state: paused;
 }
 
-/* Typing Interface Text Caret Pulse */
 .typing-cursor {
     color: #FF7A00;
     font-weight: 900;
@@ -53,7 +51,14 @@
     50% { opacity: 0; }
 }
 
-/* Delayed Content Entrance Bounds */
+@keyframes liveIndicatorPulse {
+    0%, 100% { text-shadow: 0 0 12px rgba(220, 38, 38, 0.2); }
+    50% { text-shadow: 0 0 24px rgba(220, 38, 38, 0.6); opacity: 0.85; }
+}
+.live-vibration-indicator {
+    animation: liveIndicatorPulse 2s ease-in-out infinite;
+}
+
 .fade-in-delayed-element {
     opacity: 0;
     transform: translateY(15px);
@@ -64,14 +69,20 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Form Matrix Selector Active Toggle Settings */
+/* Operational Zonal Tab Selector Markers Styles */
+.zone-toggle-btn.active {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none !important;
+    transform: translate(4px, 4px);
+}
+
 .form-matrix-btn.active {
     background-color: #ffffff;
     color: #000000;
     border-color: #ffffff;
 }
 
-/* DYNAMIC HOVER MATRIX: Spring Rigid Slab Shadow Layouts */
 .spring-tilt-card {
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
@@ -96,7 +107,6 @@
     transform: translate(-3px, -3px);
     box-shadow: 7px 7px 0px #000000;
     border-color: #000000;
-    background-color: #ffffff;
 }
 
 .dashboard-metric-pulse {
@@ -105,6 +115,11 @@
 .dashboard-metric-pulse:hover { transform: scale(1.05); }
 
 .btn-press:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #000 !important; }
+
+.scrollbar-custom::-webkit-scrollbar { width: 6px; }
+.scrollbar-custom::-webkit-scrollbar-track { background: #000000; }
+.scrollbar-custom::-webkit-scrollbar-thumb { background: #222222; border-radius: 2px; }
+.scrollbar-custom::-webkit-scrollbar-thumb:hover { background: #FF7A00; }
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #f4f1ea; }
